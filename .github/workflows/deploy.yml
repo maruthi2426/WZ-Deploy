@@ -24,6 +24,9 @@ on:
       DATABASE_URL:
         description: "Database URL from MongoDB"
         required: true
+      USER_SESSION_STRING: 
+        description: "Enter Premium Session string"
+        required: true
       TELEGRAM_API:
         description: "Telegram API ID from https://my.telegram.org/"
         required: true
@@ -64,6 +67,7 @@ jobs:
           region: "eu"
         env:
           HD_OWNER_ID: ${{inputs.OWNER_ID}}
+          HD_USER_SESSION_STRUNG: ${{inputs.USER_SESSION_STRING}}
           HD_TELEGRAM_API: ${{inputs.TELEGRAM_API}}
           HD_TELEGRAM_HASH: ${{inputs.TELEGRAM_HASH}}
           HD_DATABASE_URL: ${{inputs.DATABASE_URL}}
